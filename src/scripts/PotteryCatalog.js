@@ -12,6 +12,10 @@ export const toSellOrNotToSell = (potteryObj) => {
     else {}
     return potteryObj
 }       
+
+export const usePottery = () => {
+    return potteryForSale.map(pottery => ({...pottery}))
+}
     
     
     // if (potteryObj.weight >= 6 && potteryObj.cracked === false) {
@@ -24,3 +28,4 @@ export const toSellOrNotToSell = (potteryObj) => {
     // }
     // return potteryObj
 
+//

@@ -1,6 +1,10 @@
 // Imports go first
 import { toSellOrNotToSell } from './PotteryCatalog.js'
 import { makePottery } from './PotteryWheel.js'
+import { PotteryList } from './PotteryList.js'
+
+
+
 
 let finishedPot = makePottery("vase", "5 lbs", "14 inches")
 
@@ -8,15 +12,15 @@ console.log(finishedPot)
 
 
 // Make 5 pieces of pottery at the wheel
-let mug = makePottery("round", "1 lb", "6 inches")
+let mug = makePottery("mug", "1 lb", "6 inches")
 console.log(mug)
-let plate = makePottery("round", "2 lbs", "12 inches")
+let plate = makePottery("plate", "2 lbs", "12 inches")
 console.log(plate)
-let bowl = makePottery("round", "2 lbs", "8 inches")
+let bowl = makePottery("bowl", "2 lbs", "8 inches")
 console.log(bowl)
-let gravyBoat = makePottery("oval", "1 lb", "6 inches")
+let gravyBoat = makePottery("Gravy Boat", "1 lb", "6 inches")
 console.log(gravyBoat)
-let servingDish = makePottery("oval", "4 lbs", "14 inches")
+let servingDish = makePottery("Serving Dish", "4 lbs", "14 inches")
 console.log(servingDish)
 
 // Fire each piece of pottery in the kiln
@@ -39,10 +43,17 @@ console.log(toSellOrNotToSell(bowl))
 console.log(toSellOrNotToSell(plate))
 console.log(toSellOrNotToSell(gravyBoat))
 console.log(toSellOrNotToSell(servingDish))
+
+
+let potteryHTMLString = PotteryList()
+
+console.log(potteryHTMLString)
 // Determine which ones should be sold, and their price
 
 
 // Invoke the component function that renders the HTML list
+const parentHTMLElement = document.querySelector('.potteryList')
+parentHTMLElement.innerHTML = PotteryList()
 
 
-
+//
