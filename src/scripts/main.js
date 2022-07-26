@@ -1,4 +1,5 @@
 // Imports go first
+import { toSellOrNotToSell } from './PotteryCatalog.js'
 import { makePottery } from './PotteryWheel.js'
 
 let finishedPot = makePottery("vase", "5 lbs", "14 inches")
@@ -33,7 +34,11 @@ console.log(firePottery(bowl, 2300))
 console.log(firePottery(plate, 1600))
 console.log(firePottery(gravyBoat, 2400))
 console.log(firePottery(servingDish, 2000))
-
+console.log(toSellOrNotToSell(mug))
+console.log(toSellOrNotToSell(bowl))
+console.log(toSellOrNotToSell(plate))
+console.log(toSellOrNotToSell(gravyBoat))
+console.log(toSellOrNotToSell(servingDish))
 // Determine which ones should be sold, and their price
 
 
